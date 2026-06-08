@@ -95,42 +95,59 @@
       color: var(--ink);
       background: var(--white);
       overflow-x: hidden;
-      cursor: none;
     }
 
     /* ══════════════════════════════════════
-       CUSTOM CURSOR
+       SPLASH SCREEN
     ══════════════════════════════════════ */
-    .cursor-dot {
+    .splash {
       position: fixed;
-      width: 6px; height: 6px;
-      background: var(--slate);
-      border-radius: 50%;
+      inset: 0;
+      background: var(--ink-deep);
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
       pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: transform 0.1s ease, background 0.2s;
     }
-    .cursor-ring {
-      position: fixed;
-      width: 36px; height: 36px;
-      border: 1px solid rgba(136,151,169,0.6);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9998;
-      transform: translate(-50%, -50%);
-      transition: width 0.3s ease, height 0.3s ease,
-                  border-color 0.3s ease, transform 0.08s ease;
+    .splash-logo {
+      width: min(320px, 60vw);
+      opacity: 0;
+      transform: scale(0.92);
+      animation: splashLogoIn 1s cubic-bezier(0.4,0,0.2,1) 0.3s forwards;
     }
-    body.cursor-hover .cursor-ring {
-      width: 56px; height: 56px;
-      border-color: var(--slate);
-      background: rgba(187,212,216,0.08);
+    .splash-line {
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--ice), transparent);
+      animation: splashLine 1s ease 0.7s forwards;
     }
-    body.cursor-hover .cursor-dot {
-      background: var(--ink);
-      transform: translate(-50%, -50%) scale(1.5);
+    .splash-tagline {
+      font-family: 'Raleway', sans-serif;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: rgba(187,212,216,0.55);
+      opacity: 0;
+      animation: splashLogoIn 0.8s ease 1s forwards;
     }
+    @keyframes splashLogoIn {
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes splashLine {
+      to { width: min(220px, 45vw); }
+    }
+    .splash.dissolve {
+      animation: splashDissolve 1s cubic-bezier(0.4,0,0.2,1) forwards;
+    }
+    @keyframes splashDissolve {
+      0%   { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    body.splash-active { overflow: hidden; }
 
     /* ══════════════════════════════════════
        PAGE LOAD LINE
@@ -266,6 +283,18 @@
         rgba(28,37,48,0.2) 60%,
         transparent 100%
       );
+    }
+    .hero-logo {
+      width: 200px;
+      height: auto;
+      display: block;
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: heroLogoFade 1s ease 2.8s forwards;
+      filter: brightness(0) saturate(100%) invert(83%) sepia(15%) saturate(400%) hue-rotate(160deg) brightness(100%);
+    }
+    @keyframes heroLogoFade {
+      to { opacity: 1; }
     }
     .hero-content-block {
       position: absolute;
@@ -1302,9 +1331,18 @@
 <!-- Load line -->
 <div class="load-line" aria-hidden="true"></div>
 
-<!-- Custom cursor -->
-<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<!-- ═══════════════════════════════════════
+     SPLASH SCREEN
+═══════════════════════════════════════ -->
+<div class="splash" id="splash" role="presentation" aria-hidden="true">
+  <img
+    src="Images/icedbluelogo.png"
+    alt=""
+    class="splash-logo"
+  />
+  <div class="splash-line"></div>
+  <span class="splash-tagline">Professional Organizing</span>
+</div>
 
 <!-- ═══════════════════════════════════════
      UTILITY BAR
@@ -1359,6 +1397,12 @@
   <div class="hero-overlay" aria-hidden="true"></div>
 
   <div class="hero-content-block">
+    <img
+      src="Images/icedbluelogo.png"
+      alt="Cloudy to Clear Professional Organizing"
+      class="hero-logo"
+      width="220" height="148"
+    />
     <div class="hero-eyebrow">San Francisco Bay Area</div>
     <h1>
       Let's get<br>
@@ -1805,35 +1849,35 @@
      JAVASCRIPT
 ═══════════════════════════════════════ -->
 <script>
-  /* ── Mark JS as ready so reveal animations activate ── */
-  document.body.classList.add('js-ready');
+  /* ── Splash Screen ──
+     Plays once per session. After first visit,
+     sessionStorage skips it so returning visitors
+     go straight to the page.
+  ── */
+  const splash = document.getElementById('splash');
+  const hasSeenSplash = sessionStorage.getItem('splashSeen');
 
-  /* ── Custom Cursor ── */
-  const dot  = document.getElementById('cursorDot');
-  const ring = document.getElementById('cursorRing');
-  let mouseX = 0, mouseY = 0;
-  let ringX  = 0, ringY  = 0;
+  if (hasSeenSplash) {
+    // Already seen this session — remove instantly
+    splash.style.display = 'none';
+  } else {
+    // First visit — play the sequence
+    document.body.classList.add('splash-active');
 
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top  = mouseY + 'px';
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    ring.style.left = ringX + 'px';
-    ring.style.top  = ringY + 'px';
-    requestAnimationFrame(animateRing);
+    // After 2.4s, start dissolve
+    setTimeout(() => {
+      splash.classList.add('dissolve');
+      // After dissolve completes, remove from DOM
+      setTimeout(() => {
+        splash.style.display = 'none';
+        document.body.classList.remove('splash-active');
+        sessionStorage.setItem('splashSeen', 'true');
+      }, 1000);
+    }, 2400);
   }
-  animateRing();
 
-  document.querySelectorAll('a, button, .service-card').forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-  });
+  /* ── Mark JS ready for reveal animations ── */
+  document.body.classList.add('js-ready');
 
   /* ── Scroll Reveal ── */
   const revealObserver = new IntersectionObserver((entries) => {
