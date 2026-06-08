@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO ═══ -->
+  <title>About Claudia Pugay | Professional Organizer San Francisco Bay Area</title>
+  <meta name="description" content="Meet Claudia Pugay — San Francisco Bay Area professional organizer with 20+ years of corporate experience. NAPO member. Serving SF, San Mateo County & East Bay. Book a free call." />
+  <link rel="canonical" href="https://www.cloudytoclearpo.com/about/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cloudytoclearpo.com/about/" />
+  <meta property="og:title" content="About Claudia Pugay | Professional Organizer San Francisco Bay Area" />
+  <meta property="og:description" content="Born and raised in San Francisco, Claudia brings 20+ years of corporate expertise and a passion for creating calm, functional spaces." />
+  <meta property="og:image" content="https://www.cloudytoclearpo.com/Images/claudiaprofile1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ═══ Person Schema ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Claudia Pugay",
+    "jobTitle": "Professional Organizer",
+    "url": "https://www.cloudytoclearpo.com/about/",
+    "image": "https://www.cloudytoclearpo.com/Images/claudiaprofile1.jpg",
+    "telephone": "+14155191369",
+    "email": "claudia@cloudytoclearpo.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Daly City",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "knowsLanguage": ["English", "Spanish", "Portuguese"],
+    "memberOf": [
+      { "@type": "Organization", "name": "NAPO" },
+      { "@type": "Organization", "name": "Institute for Challenging Disorganization" },
+      { "@type": "Organization", "name": "AADMM" }
+    ],
+    "worksFor": {
+      "@type": "LocalBusiness",
+      "name": "Cloudy to Clear Professional Organizing",
+      "url": "https://www.cloudytoclearpo.com"
+    },
+    "description": "Claudia Pugay is a San Francisco Bay Area professional organizer specializing in home and office organizing for busy professionals and families. NAPO member with 20+ years of corporate experience."
+  }
+  </script>
+
+  <!-- ═══ Fonts ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200;1,300&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --ice:      #bbd4d8;
+      --sky:      #bfd2e1;
+      --mist:     #c8c7d5;
+      --slate:    #8897a9;
+      --white:    #ffffff;
+      --ink:      #2c3540;
+      --ink-deep: #1c2530;
+      --soft:     #f7f5f2;
+      --warm:     #f2ede8;
+      --mid:      #e6dfd8;
+      --cream:    #faf8f5;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--white);
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* ── CURSOR ── */
+    .cursor-dot {
+      position: fixed; width: 6px; height: 6px;
+      background: var(--slate); border-radius: 50%;
+      pointer-events: none; z-index: 9999;
+      transform: translate(-50%,-50%);
+      transition: transform 0.1s ease, background 0.2s;
+    }
+    .cursor-ring {
+      position: fixed; width: 36px; height: 36px;
+      border: 1px solid rgba(136,151,169,0.6); border-radius: 50%;
+      pointer-events: none; z-index: 9998;
+      transform: translate(-50%,-50%);
+      transition: width 0.3s, height 0.3s, border-color 0.3s;
+    }
+    body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: var(--slate); background: rgba(187,212,216,0.08); }
+    body.cursor-hover .cursor-dot  { background: var(--ink); transform: translate(-50%,-50%) scale(1.5); }
+
+    /* ── LOAD LINE ── */
+    .load-line {
+      position: fixed; top: 0; left: 0; height: 2px;
+      background: linear-gradient(90deg, var(--ice), var(--slate));
+      z-index: 10000; width: 0%;
+      animation: loadLine 1s ease forwards;
+    }
+    @keyframes loadLine { to { width: 100%; opacity: 0; } }
+
+    /* ── UTILITY BAR ── */
+    .utility-bar {
+      background: var(--ink-deep);
+      color: rgba(255,255,255,0.6);
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      display: flex; justify-content: space-between;
+      align-items: center; padding: 10px 60px;
+    }
+    .utility-bar a { color: inherit; text-decoration: none; transition: color 0.2s; }
+    .utility-bar a:hover { color: var(--ice); }
+    .utility-socials { display: flex; gap: 24px; align-items: center; }
+    .utility-divider { width: 1px; height: 12px; background: rgba(255,255,255,0.2); }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(187,212,216,0.3);
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 0 60px; height: 76px;
+    }
+    .nav-logo img { height: 44px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 40px; list-style: none; align-items: center; }
+    .nav-links a {
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--ink); text-decoration: none;
+      position: relative; padding-bottom: 4px;
+    }
+    .nav-links a.active { color: var(--slate); }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 0; height: 1px; background: var(--slate);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after { width: 100%; }
+    .nav-cta {
+      background: var(--ink) !important; color: var(--white) !important;
+      padding: 11px 28px !important; letter-spacing: 0.18em !important;
+      transition: background 0.25s !important;
+    }
+    .nav-cta:hover { background: var(--slate) !important; }
+    .nav-cta::after { display: none !important; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      position: relative;
+      height: 52vh; min-height: 380px;
+      overflow: hidden;
+      display: flex; align-items: flex-end;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background-color: #a8bcc8;
+      background-image: url('../Images/landscapehallway.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      transform: scale(1.04);
+      animation: heroZoom 8s ease forwards;
+    }
+    @keyframes heroZoom { to { transform: scale(1); } }
+    .page-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(28,37,48,0.75) 0%,
+        rgba(28,37,48,0.3) 50%,
+        rgba(28,37,48,0.1) 100%
+      );
+    }
+    .page-hero-content {
+      position: relative; z-index: 2;
+      padding: 0 60px 56px;
+    }
+    .page-eyebrow {
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--ice); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .page-eyebrow::before {
+      content: ''; display: block;
+      width: 28px; height: 1px;
+      background: var(--ice); flex-shrink: 0;
+    }
+    .page-hero h1 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100;
+      font-size: clamp(40px, 5vw, 72px);
+      color: var(--white); letter-spacing: 0.04em;
+      line-height: 1.1;
+    }
+    .page-hero h1 em {
+      font-style: italic; font-weight: 200;
+      color: var(--ice); display: block;
+    }
+
+    /* ── INTRO SPLIT ── */
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 700px;
+    }
+    .about-intro-img {
+      position: relative; overflow: hidden;
+    }
+    .about-intro-img img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+      display: block;
+      transition: transform 0.8s ease;
+    }
+    .about-intro-img:hover img { transform: scale(1.03); }
+    .about-intro-content {
+      background: var(--cream);
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 80px 72px;
+    }
+    .section-eyebrow {
+      font-family: 'Raleway', sans-serif;
+      font-size: 9px; font-weight: 500;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--slate); margin-bottom: 20px; display: block;
+    }
+    .about-intro-content h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      font-size: clamp(28px, 3vw, 44px);
+      color: var(--ink); letter-spacing: 0.04em;
+      line-height: 1.2; margin-bottom: 28px;
+    }
+    .about-intro-content h2 em {
+      font-style: italic; font-weight: 300; color: var(--slate);
+    }
+    .about-intro-content p {
+      font-size: 15px; font-weight: 300;
+      line-height: 1.9; color: #5a6a7a;
+      margin-bottom: 20px; max-width: 460px;
+    }
+    .about-quote {
+      border-left: 2px solid var(--ice);
+      padding-left: 24px; margin: 32px 0;
+    }
+    .about-quote p {
+      font-family: 'Raleway', sans-serif;
+      font-style: italic; font-weight: 200;
+      font-size: 18px !important;
+      color: var(--ink) !important;
+      line-height: 1.6 !important;
+      margin-bottom: 8px !important;
+    }
+    .about-quote cite {
+      font-family: 'Raleway', sans-serif;
+      font-size: 9px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--slate); font-style: normal;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-dark {
+      display: inline-block; background: var(--ink); color: var(--white);
+      font-family: 'Raleway', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none;
+      padding: 15px 36px; align-self: flex-start;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .btn-dark:hover { background: var(--slate); transform: translateY(-2px); }
+    .btn-outlined {
+      display: inline-block; border: 1px solid var(--ink); color: var(--ink);
+      font-family: 'Raleway', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none;
+      padding: 14px 36px; transition: background 0.25s, color 0.25s;
+    }
+    .btn-outlined:hover { background: var(--ink); color: var(--white); }
+    .btn-light-outline {
+      display: inline-block; border: 1px solid rgba(255,255,255,0.4); color: var(--white);
+      font-family: 'Raleway', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none;
+      padding: 14px 36px; transition: background 0.25s, border-color 0.25s;
+    }
+    .btn-light-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
+
+    /* ── STORY SECTION ── */
+    .about-story {
+      padding: 100px 60px;
+      background: var(--white);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .about-story-left h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200; font-size: clamp(28px, 3vw, 44px);
+      color: var(--ink); letter-spacing: 0.04em;
+      line-height: 1.2; position: sticky; top: 100px;
+    }
+    .about-story-left h2 em { font-style: italic; font-weight: 300; color: var(--slate); }
+    .about-story-right p {
+      font-size: 15px; font-weight: 300;
+      line-height: 1.95; color: #5a6a7a;
+      margin-bottom: 24px;
+    }
+    .about-story-right p:last-child { margin-bottom: 0; }
+    .story-highlight {
+      background: var(--warm);
+      border-left: 3px solid var(--ice);
+      padding: 28px 32px; margin: 36px 0;
+    }
+    .story-highlight p {
+      font-family: 'Raleway', sans-serif;
+      font-style: italic; font-weight: 300;
+      font-size: 17px !important; color: var(--ink) !important;
+      line-height: 1.7 !important; margin: 0 !important;
+    }
+
+    /* ── CREDENTIALS GRID ── */
+    .credentials {
+      background: var(--warm);
+      padding: 100px 60px;
+    }
+    .credentials-header {
+      text-align: center; margin-bottom: 64px;
+    }
+    .credentials-header h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200; font-size: clamp(28px, 3vw, 44px);
+      color: var(--ink); letter-spacing: 0.04em;
+      margin-top: 14px;
+    }
+    .credentials-header h2 em { font-style: italic; font-weight: 300; color: var(--slate); }
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+    }
+    .credential-card {
+      background: var(--white);
+      padding: 48px 40px;
+      transition: background 0.3s;
+      border-top: 2px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .credential-card:hover {
+      background: var(--cream);
+      border-color: var(--ice);
+    }
+    .credential-card a {
+      text-decoration: none; color: inherit; display: block;
+    }
+    .credential-icon {
+      width: 44px; height: 44px;
+      border: 1px solid var(--mid);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      transition: border-color 0.3s;
+    }
+    .credential-card:hover .credential-icon { border-color: var(--slate); }
+    .credential-icon svg {
+      width: 18px; height: 18px;
+      stroke: var(--slate); fill: none; stroke-width: 1.5;
+    }
+    .credential-card h3 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400; font-size: 13px;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--ink); margin-bottom: 10px;
+    }
+    .credential-card p {
+      font-size: 13.5px; font-weight: 300;
+      line-height: 1.75; color: #6a7a8a;
+    }
+
+    /* ── VALUES DARK STRIP ── */
+    .values-strip {
+      background: var(--ink-deep);
+      padding: 100px 60px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .value-card {
+      background: rgba(255,255,255,0.04);
+      padding: 52px 44px;
+      border-top: 2px solid transparent;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .value-card:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: var(--ice);
+    }
+    .value-num {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100; font-size: 48px;
+      color: rgba(187,212,216,0.2);
+      line-height: 1; margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .value-card h3 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300; font-size: 22px;
+      color: var(--white); letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+    .value-card p {
+      font-size: 14px; font-weight: 300;
+      line-height: 1.85; color: rgba(255,255,255,0.6);
+    }
+
+    /* ── PERSONAL TOUCHES ── */
+    .personal {
+      padding: 100px 60px;
+      background: var(--cream);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      align-items: stretch;
+    }
+    .personal-img {
+      position: relative; overflow: hidden;
+      min-height: 500px;
+    }
+    .personal-img img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+      display: block;
+      transition: transform 0.7s ease;
+    }
+    .personal-img:hover img { transform: scale(1.04); }
+    .personal-content {
+      background: var(--white);
+      padding: 64px 56px;
+      display: flex; flex-direction: column;
+      justify-content: center;
+    }
+    .personal-content h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200; font-size: clamp(26px, 2.5vw, 38px);
+      color: var(--ink); letter-spacing: 0.04em;
+      line-height: 1.2; margin-bottom: 28px;
+    }
+    .personal-content h2 em { font-style: italic; font-weight: 300; color: var(--slate); }
+    .personal-content p {
+      font-size: 14.5px; font-weight: 300;
+      line-height: 1.9; color: #5a6a7a;
+      margin-bottom: 18px;
+    }
+    .personal-details {
+      margin-top: 32px; border-top: 1px solid var(--mid);
+      padding-top: 32px; display: flex; flex-direction: column; gap: 14px;
+    }
+    .personal-detail {
+      display: flex; align-items: baseline; gap: 16px;
+    }
+    .personal-detail-label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 9px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--slate); flex-shrink: 0; min-width: 80px;
+    }
+    .personal-detail-value {
+      font-size: 14px; font-weight: 300;
+      color: var(--ink); line-height: 1.5;
+    }
+    .personal-detail-value a {
+      color: var(--ink); text-decoration: none;
+      border-bottom: 1px solid var(--mid);
+      transition: border-color 0.2s;
+    }
+    .personal-detail-value a:hover { border-color: var(--slate); }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, #b8ccda 0%, #bbd4d8 40%, #c4c3d2 100%);
+      padding: 100px 60px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 60px;
+    }
+    .cta-banner h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 100; font-size: clamp(32px, 4vw, 52px);
+      color: var(--ink); letter-spacing: 0.04em;
+      line-height: 1.15; margin-bottom: 16px;
+    }
+    .cta-banner h2 em { font-style: italic; font-weight: 200; }
+    .cta-banner p {
+      font-size: 15px; font-weight: 300;
+      line-height: 1.85; color: rgba(44,53,64,0.72);
+      max-width: 520px;
+    }
+    .cta-actions {
+      display: flex; flex-direction: column;
+      gap: 16px; flex-shrink: 0;
+    }
+    .btn-ink {
+      display: inline-block; background: var(--ink); color: var(--white);
+      font-family: 'Raleway', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none;
+      padding: 18px 44px; text-align: center; white-space: nowrap;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .btn-ink:hover { background: #3d4e5e; transform: translateY(-2px); }
+    .cta-phone {
+      font-family: 'Raleway', sans-serif;
+      font-size: 10px; font-weight: 400;
+      letter-spacing: 0.16em; color: rgba(44,53,64,0.6);
+      text-align: center; text-decoration: none;
+      transition: color 0.2s;
+    }
+    .cta-phone:hover { color: var(--ink); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink-deep);
+      padding: 72px 60px 36px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.2fr;
+      gap: 56px; padding-bottom: 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .footer-logo img {
+      height: 52px; width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.85; margin-bottom: 20px; display: block;
+    }
+    .footer-tagline {
+      font-size: 13px; font-weight: 300;
+      line-height: 1.85; color: rgba(255,255,255,0.5);
+      max-width: 260px;
+    }
+    .footer-col-title {
+      font-family: 'Raleway', sans-serif;
+      font-size: 9px; font-weight: 500;
+      letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--ice); margin-bottom: 24px; display: block;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a {
+      font-size: 13px; font-weight: 300;
+      color: rgba(255,255,255,0.5); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--ice); }
+    .footer-contact-item {
+      font-size: 13px; font-weight: 300;
+      color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 12px;
+    }
+    .footer-contact-item a {
+      color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s;
+    }
+    .footer-contact-item a:hover { color: var(--ice); }
+    .footer-areas {
+      font-size: 12px; font-weight: 300;
+      line-height: 2; color: rgba(255,255,255,0.35);
+    }
+    .footer-bottom {
+      padding-top: 28px;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; }
+    .footer-credit { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.06em; }
+    .footer-credit a { color: var(--ice); text-decoration: none; opacity: 0.75; transition: opacity 0.2s; }
+    .footer-credit a:hover { opacity: 1; }
+    .footer-socials { display: flex; gap: 20px; }
+    .footer-socials a {
+      font-family: 'Raleway', sans-serif;
+      font-size: 9px; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s;
+    }
+    .footer-socials a:hover { color: var(--ice); }
+
+    /* ── REVEAL ANIMATIONS ── */
+    .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .js-ready .reveal { opacity: 0; transform: translateY(28px); }
+    .js-ready .reveal.revealed { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .utility-bar, nav { padding-left: 32px; padding-right: 32px; }
+      .page-hero-content { padding: 0 32px 48px; }
+      .about-intro, .personal { grid-template-columns: 1fr; }
+      .personal-img { min-height: 400px; }
+      .about-story { grid-template-columns: 1fr; gap: 40px; }
+      .about-story-left h2 { position: static; }
+      .credentials-grid { grid-template-columns: 1fr 1fr; }
+      .values-strip { grid-template-columns: 1fr; }
+      .cta-banner { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .about-intro-content, .about-story,
+      .credentials, .personal-content,
+      .cta-banner { padding: 72px 32px; }
+      footer { padding: 60px 32px 32px; }
+    }
+    @media (max-width: 768px) {
+      .utility-bar { display: none; }
+      nav { padding: 0 24px; height: 64px; }
+      .nav-links { display: none; }
+      .credentials-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .about-intro-content { padding: 48px 28px; }
+      .personal-content { padding: 48px 28px; }
+      .about-story { padding: 56px 24px; }
+      .credentials { padding: 56px 24px; }
+      .cta-banner { padding: 64px 24px; }
+      footer { padding: 48px 24px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="load-line" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ═══ UTILITY BAR ═══ -->
+<div class="utility-bar">
+  <span>Professional Organizer &middot; San Francisco Bay Area &middot; Daly City, CA</span>
+  <div class="utility-socials">
+    <a href="https://www.instagram.com/cloudytoclear_organizing" target="_blank" rel="noopener">Instagram</a>
+    <div class="utility-divider"></div>
+    <a href="http://www.linkedin.com/in/claudia-p-a56a325" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="utility-divider"></div>
+    <a href="https://www.yelp.com/biz/cloudy-to-clear-professional-organizing-daly-city-2" target="_blank" rel="noopener">Yelp</a>
+    <div class="utility-divider"></div>
+    <a href="tel:+14155191369">415-519-1369</a>
+  </div>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo">
+    <a href="/" aria-label="Cloudy to Clear home">
+      <img src="../Images/blacklogo.png" alt="Cloudy to Clear Professional Organizing" width="160" height="44" />
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about" class="active">About</a></li>
+    <li><a href="/services">Services &amp; Pricing</a></li>
+    <li><a href="/faqs">FAQs</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/collaborations">Collaborations</a></li>
+    <li><a href="/contact" class="nav-cta">Book a Free Call</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ PAGE HERO ═══ -->
+<section class="page-hero" aria-label="About page hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-overlay" aria-hidden="true"></div>
+  <div class="page-hero-content">
+    <div class="page-eyebrow">Professional Organizer &middot; San Francisco Bay Area</div>
+    <h1>
+      Meet Claudia,<br>
+      <em>the founder.</em>
+    </h1>
+  </div>
+</section>
+
+<!-- ═══ INTRO SPLIT ═══ -->
+<section class="about-intro" aria-labelledby="about-intro-heading">
+  <div class="about-intro-img">
+    <img
+      src="../Images/claudiaprofile1.jpg"
+      alt="Claudia Pugay, founder of Cloudy to Clear Professional Organizing, San Francisco Bay Area"
+      loading="lazy"
+      width="800" height="1000"
+    />
+  </div>
+  <div class="about-intro-content reveal">
+    <span class="section-eyebrow">Hello, I&rsquo;m Claudia</span>
+    <h2 id="about-intro-heading">
+      The founder behind<br>
+      <em>Cloudy to Clear.</em>
+    </h2>
+    <p>
+      I specialize in bringing order and harmony to homes across the San Francisco
+      Bay Area. I was born and raised in San Francisco and have a deep love for
+      this city — from its vibrant neighborhoods to its stunning natural beauty.
+    </p>
+    <p>
+      When I&rsquo;m not organizing, you&rsquo;ll likely find me hiking local trails,
+      exploring new eateries, or enjoying live music at SF Jazz.
+    </p>
+    <div class="about-quote">
+      <p>&ldquo;Decluttering isn&rsquo;t just about stuff &mdash; it&rsquo;s about making space for what truly matters.&rdquo;</p>
+      <cite>&mdash; Claudia Pugay</cite>
+    </div>
+    <a href="/contact" class="btn-dark">Book a Complimentary Call</a>
+  </div>
+</section>
+
+<!-- ═══ STORY ═══ -->
+<section class="about-story" aria-labelledby="story-heading">
+  <div class="about-story-left reveal">
+    <span class="section-eyebrow">My Journey</span>
+    <h2 id="story-heading">
+      How Cloudy to Clear<br>
+      <em>came to be.</em>
+    </h2>
+  </div>
+  <div class="about-story-right reveal reveal-delay-1">
+    <p>
+      After more than 20 years in the Biotech and Pharmaceutical industry,
+      I experienced firsthand how demanding professional life can be — and how
+      challenging it is to stay organized when you are constantly juggling work,
+      family responsibilities, and everything in between.
+    </p>
+    <p>
+      I watched colleagues, friends, and even myself struggle with cluttered
+      home offices, overwhelming closets, and kitchen drawers that became
+      a source of daily frustration rather than ease. The stress of a
+      disorganized space quietly compounds every other pressure in a busy life.
+    </p>
+    <div class="story-highlight">
+      <p>&ldquo;I took the skills I developed in my corporate career — attention to detail, project management, and problem-solving — and combined them with my natural love for creating order.&rdquo;</p>
+    </div>
+    <p>
+      That journey inspired me to start Cloudy to Clear. Now, I get to help
+      other busy professionals and families in the San Francisco Bay Area
+      simplify their lives, one organized space at a time.
+    </p>
+    <p>
+      Organizing spaces isn&rsquo;t just a job for me — it&rsquo;s a true passion.
+      I believe in the transformative power of decluttering and organizing, and
+      I&rsquo;m here to help you experience the joy, clarity, and calm that comes
+      from living in a space that truly supports your life.
+    </p>
+  </div>
+</section>
+
+<!-- ═══ CREDENTIALS ═══ -->
+<section class="credentials" aria-labelledby="credentials-heading">
+  <div class="credentials-header reveal">
+    <span class="section-eyebrow">Memberships &amp; Affiliations</span>
+    <h2 id="credentials-heading">
+      Professionally trained,<br>
+      <em>community connected.</em>
+    </h2>
+  </div>
+  <div class="credentials-grid">
+    <div class="credential-card reveal reveal-delay-1">
+      <a href="https://www.napo.net/" target="_blank" rel="noopener" aria-label="NAPO - National Association of Productivity and Organizing Professionals">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>NAPO Member</h3>
+        <p>National Association of Productivity &amp; Organizing Professionals — the gold standard in professional organizing.</p>
+      </a>
+    </div>
+    <div class="credential-card reveal reveal-delay-2">
+      <a href="https://www.challengingdisorganization.org/" target="_blank" rel="noopener" aria-label="ICD - Institute for Challenging Disorganization">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        </div>
+        <h3>ICD Member</h3>
+        <p>Institute for Challenging Disorganization — specialized training for clients with complex organizing needs.</p>
+      </a>
+    </div>
+    <div class="credential-card reveal reveal-delay-3">
+      <a href="https://www.inspiredorganizer.com/network" target="_blank" rel="noopener" aria-label="Inspired Organizer Network">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Inspired Organizer</h3>
+        <p>Professional network of trained organizers committed to compassionate, client-centered practices.</p>
+      </a>
+    </div>
+    <div class="credential-card reveal reveal-delay-1">
+      <a href="https://secure.aadmm.com/" target="_blank" rel="noopener" aria-label="AADMM - American Association of Daily Money Managers">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        </div>
+        <h3>AADMM Member</h3>
+        <p>American Association of Daily Money Managers — expertise in financial organization and paper management systems.</p>
+      </a>
+    </div>
+    <div class="credential-card reveal reveal-delay-2">
+      <a href="https://www.findmyorganizer.com/" target="_blank" rel="noopener" aria-label="Find My Organizer">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Find My Organizer</h3>
+        <p>Listed on Find My Organizer — the trusted directory connecting clients with vetted professional organizers.</p>
+      </a>
+    </div>
+    <div class="credential-card reveal reveal-delay-3">
+      <a href="https://greenbusinessca.org/" target="_blank" rel="noopener" aria-label="California Green Business">
+        <div class="credential-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 22c1.25-1.25 2.5-2.5 3.75-2.5S8 20.75 9.25 20.75 11.5 19.5 12.75 19.5 15 20.75 16.25 20.75 18.5 19.5 19.75 19.5 22 20.75 22 22"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10"/><path d="M12 2c0 0 4 4 4 10"/><path d="M12 2S8 6 8 12"/></svg>
+        </div>
+        <h3>CA Green Business</h3>
+        <p>Certified California Green Business — committed to sustainable organizing practices that are good for your home and the planet.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VALUES ═══ -->
+<section class="values-strip" aria-labelledby="values-heading">
+  <div class="value-card reveal">
+    <div class="value-num" aria-hidden="true">01</div>
+    <h3 id="values-heading">Trust</h3>
+    <p>I respect and value your privacy completely. I aim to ensure you feel entirely comfortable with me working in your personal space — without judgment, without pressure, every single session.</p>
+  </div>
+  <div class="value-card reveal reveal-delay-2">
+    <div class="value-num" aria-hidden="true">02</div>
+    <h3>Collaboration</h3>
+    <p>We work together to create practical, creative solutions you can actually maintain. Your preferences, your pace, your lifestyle — every system is built around you, not a generic template.</p>
+  </div>
+  <div class="value-card reveal reveal-delay-3">
+    <div class="value-num" aria-hidden="true">03</div>
+    <h3>Reliability</h3>
+    <p>You can count on kindness, compassion, and deep empathy — every single session, without exception. I show up prepared, on time, and fully committed to your goals.</p>
+  </div>
+</section>
+
+<!-- ═══ PERSONAL DETAILS ═══ -->
+<section class="personal" aria-labelledby="personal-heading">
+  <div class="personal-img">
+    <img
+      src="../Images/claudiaprofile2.jpg"
+      alt="Claudia Pugay professional organizer headshot"
+      loading="lazy"
+      width="800" height="900"
+    />
+  </div>
+  <div class="personal-content reveal">
+    <span class="section-eyebrow">Get in Touch</span>
+    <h2 id="personal-heading">
+      Ready to work<br>
+      <em>together?</em>
+    </h2>
+    <p>
+      I would love to hear about your space and your goals.
+      Reach out and let&rsquo;s talk about how I can bring your home
+      from Cloudy to Clear.
+    </p>
+    <p>
+      Every project starts with a complimentary 15-minute phone consultation —
+      no commitment, no pressure. Just a calm conversation about what
+      you need and how I can help.
+    </p>
+    <div class="personal-details">
+      <div class="personal-detail">
+        <span class="personal-detail-label">Email</span>
+        <span class="personal-detail-value">
+          <a href="mailto:claudia@cloudytoclearpo.com?subject=I'm ready to get organized!">claudia@cloudytoclearpo.com</a>
+        </span>
+      </div>
+      <div class="personal-detail">
+        <span class="personal-detail-label">Phone</span>
+        <span class="personal-detail-value">
+          <a href="tel:+14155191369">415-519-1369</a>
+        </span>
+      </div>
+      <div class="personal-detail">
+        <span class="personal-detail-label">Location</span>
+        <span class="personal-detail-value">Daly City, CA &middot; Serving the SF Bay Area</span>
+      </div>
+      <div class="personal-detail">
+        <span class="personal-detail-label">Languages</span>
+        <span class="personal-detail-value">English &middot; Spanish &middot; Portuguese</span>
+      </div>
+      <div class="personal-detail">
+        <span class="personal-detail-label">Photography</span>
+        <span class="personal-detail-value">
+          <a href="https://www.jessicamcintosh.net" target="_blank" rel="noopener">Jessica McIntosh</a>
+        </span>
+      </div>
+    </div>
+    <br>
+    <a href="/contact" class="btn-dark">Book a Free Consultation</a>
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER ═══ -->
+<section class="cta-banner" aria-labelledby="cta-heading">
+  <div>
+    <h2 id="cta-heading">
+      Let&rsquo;s bring your space<br>
+      <em>from Cloudy to Clear.</em>
+    </h2>
+    <p>
+      Serving San Francisco, Daly City, San Mateo County, and the East Bay.
+      Start with a free 15-minute phone consultation — no commitment required.
+    </p>
+  </div>
+  <div class="cta-actions">
+    <a href="/contact" class="btn-ink">Book Your Free Call</a>
+    <a href="tel:+14155191369" class="cta-phone">or call 415-519-1369</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="../Images/whitelogo.png" alt="Cloudy to Clear Professional Organizing" width="160" height="52" loading="lazy" />
+      <p class="footer-tagline">Professional home and office organizing for busy Bay Area lives. Serving San Francisco, San Mateo County, Daly City, and the East Bay since 2022.</p>
+    </div>
+    <div class="footer-col">
+      <span class="footer-col-title">Pages</span>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Claudia</a></li>
+        <li><a href="/services">Services &amp; Pricing</a></li>
+        <li><a href="/faqs">FAQs</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/collaborations">Collaborations</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <span class="footer-col-title">Contact</span>
+      <div class="footer-contact-item"><a href="mailto:claudia@cloudytoclearpo.com">claudia@cloudytoclearpo.com</a></div>
+      <div class="footer-contact-item"><a href="tel:+14155191369">415-519-1369</a></div>
+      <div class="footer-contact-item">Daly City, California</div>
+      <div class="footer-contact-item">San Francisco Bay Area</div>
+      <br>
+      <span class="footer-col-title">Follow</span>
+      <div class="footer-contact-item"><a href="https://www.instagram.com/cloudytoclear_organizing" target="_blank" rel="noopener">Instagram</a></div>
+      <div class="footer-contact-item"><a href="http://www.linkedin.com/in/claudia-p-a56a325" target="_blank" rel="noopener">LinkedIn</a></div>
+      <div class="footer-contact-item"><a href="https://www.yelp.com/biz/cloudy-to-clear-professional-organizing-daly-city-2" target="_blank" rel="noopener">Yelp</a></div>
+      <div class="footer-contact-item"><a href="https://g.page/r/CRbKg20mQEh2EAI/review" target="_blank" rel="noopener">Google Business</a></div>
+    </div>
+    <div class="footer-col">
+      <span class="footer-col-title">Service Areas</span>
+      <p class="footer-areas">
+        San Francisco &middot; Daly City &middot; San Mateo &middot;
+        Burlingame &middot; Palo Alto &middot; Redwood City &middot;
+        Menlo Park &middot; South San Francisco &middot;
+        San Bruno &middot; Pacifica &middot; Half Moon Bay &middot;
+        Oakland &middot; Berkeley &middot; Alameda &middot;
+        El Cerrito &middot; Emeryville &middot; Piedmont
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">Cloudy to Clear Professional Organizing &copy; 2022&ndash;2026</span>
+    <span class="footer-credit">Website by <a href="https://whiskeyandwasabi.com" target="_blank" rel="noopener">Whiskey &amp; Wasabi LLC</a></span>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/cloudytoclear_organizing" target="_blank" rel="noopener">Instagram</a>
+      <a href="http://www.linkedin.com/in/claudia-p-a56a325" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.yelp.com/biz/cloudy-to-clear-professional-organizing-daly-city-2" target="_blank" rel="noopener">Yelp</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.body.classList.add('js-ready');
+
+  /* ── Custom Cursor ── */
+  const dot  = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px';
+  });
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.12; ringY += (mouseY - ringY) * 0.12;
+    ring.style.left = ringX + 'px'; ring.style.top = ringY + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+  });
+
+  /* ── Scroll Reveal ── */
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) { el.classList.add('revealed'); }
+    else { obs.observe(el); }
+  });
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+  }
+</script>
+</body>
+</html>
