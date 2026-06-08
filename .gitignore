@@ -1,1 +1,16 @@
-Images/
+# Mac system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# VS Code settings
+.vscode/
+
+# Compressed originals (optional - keeps repo clean)
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+
