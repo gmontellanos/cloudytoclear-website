@@ -45,7 +45,7 @@
       "South San Francisco", "San Bruno", "Pacifica", "Half Moon Bay"
     ],
     "priceRange": "$$",
-    "openingHours": "Mo-Sa 08:00-18:00",
+    "openingHours": ["Mo,Tu,We,Fr 09:00-18:00", "Th 09:00-16:00", "Sa 13:00-16:00"],
     "sameAs": [
       "https://www.instagram.com/cloudytoclear_organizing",
       "http://www.linkedin.com/in/claudia-p-a56a325",
@@ -79,26 +79,30 @@
     html { scroll-behavior: smooth; }
 
     :root {
-      --ice:    #bbd4d8;
-      --sky:    #bfd2e1;
-      --mist:   #c8c7d5;
-      --slate:  #8897a9;
-      --white:  #ffffff;
-      --blush:  #ffe9e9;
-      --ink:    #2c3540;
-      --ink-deep: #1c2530;
-      --soft:   #f7f5f2;
-      --warm:   #f2ede8;
-      --mid:    #e6dfd8;
-      --cream:  #faf8f5;
+      --ice:      #bbd4d8;
+      --sky:      #bfd2e1;
+      --mist:     #c8c7d5;
+      --slate:    #8897a9;
+      --white:    #ffffff;
+      --blush:    #ffe9e9;
+      --ink:      #2c3540;
+      --ink-deep: #3d4e5e;
+      --soft:     #f7f5f2;
+      --warm:     #f2ede8;
+      --mid:      #e6dfd8;
+      --cream:    #faf8f5;
+      --ice-bg:   #eef2f5;
+      --body-txt: #3a4a5a;
     }
 
     body {
       font-family: 'Lato', sans-serif;
-      font-weight: 300;
-      color: var(--ink);
+      font-weight: 400;
+      color: var(--body-txt);
       background: var(--white);
       overflow-x: hidden;
+      font-size: 16px;
+      line-height: 2.0;
     }
 
     /* ══════════════════════════════════════
@@ -246,13 +250,13 @@
     }
     .nav-links a:hover::after { width: 100%; }
     .nav-cta {
-      background: var(--ink) !important;
+      background: var(--slate) !important;
       color: var(--white) !important;
       padding: 11px 28px !important;
       letter-spacing: 0.18em !important;
       transition: background 0.25s !important;
     }
-    .nav-cta:hover { background: var(--slate) !important; }
+    .nav-cta:hover { background: var(--ink) !important; }
     .nav-cta::after { display: none !important; }
 
     /* ── HAMBURGER MENU ── */
@@ -518,17 +522,17 @@
       color: var(--slate);
     }
     .intro-body {
-      font-size: 15px;
-      font-weight: 300;
-      line-height: 1.9;
-      color: #6a7a8a;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 2.0;
+      color: var(--body-txt);
       max-width: 620px;
       margin: 0 auto 48px;
     }
     .btn-outlined {
       display: inline-block;
-      border: 1px solid var(--ink);
-      color: var(--ink);
+      border: 1px solid var(--slate);
+      color: var(--slate);
       font-family: 'Raleway', sans-serif;
       font-size: 10px;
       font-weight: 500;
@@ -538,7 +542,7 @@
       padding: 14px 36px;
       transition: background 0.25s, color 0.25s;
     }
-    .btn-outlined:hover { background: var(--ink); color: var(--white); }
+    .btn-outlined:hover { background: var(--slate); color: var(--white); }
 
     /* ══════════════════════════════════════
        ABOUT — Split with image cards
@@ -618,10 +622,10 @@
       color: var(--slate);
     }
     .about-content p {
-      font-size: 14.5px;
-      font-weight: 300;
-      line-height: 1.9;
-      color: #5a6a7a;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 2.0;
+      color: var(--body-txt);
       margin-bottom: 18px;
       max-width: 440px;
     }
@@ -636,7 +640,7 @@
     }
     .btn-dark {
       display: inline-block;
-      background: var(--ink);
+      background: var(--slate);
       color: var(--white);
       font-family: 'Raleway', sans-serif;
       font-size: 10px;
@@ -648,7 +652,7 @@
       align-self: flex-start;
       transition: background 0.25s, transform 0.2s;
     }
-    .btn-dark:hover { background: var(--slate); transform: translateY(-2px); }
+    .btn-dark:hover { background: var(--ink); transform: translateY(-2px); }
 
     /* ══════════════════════════════════════
        SERVICES — 3 image cards (Carlile style)
@@ -796,26 +800,25 @@
        VALUES
     ══════════════════════════════════════ */
     .values {
-      background: var(--ink-deep);
+      background: var(--warm);
       padding: 100px 60px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 2px;
     }
     .value-card {
-      background: rgba(255,255,255,0.04);
+      background: var(--cream);
       padding: 52px 44px;
-      transition: background 0.3s;
       border-top: 2px solid transparent;
       transition: border-color 0.3s, background 0.3s;
     }
     .value-card:hover {
-      background: rgba(255,255,255,0.07);
-      border-color: var(--ice);
+      background: var(--white);
+      border-color: var(--slate);
     }
     .value-icon {
       width: 40px; height: 40px;
-      border: 1px solid rgba(187,212,216,0.4);
+      border: 1px solid var(--mid);
       border-radius: 50%;
       margin-bottom: 28px;
       display: flex;
@@ -824,7 +827,7 @@
     }
     .value-icon svg {
       width: 16px; height: 16px;
-      stroke: var(--ice);
+      stroke: var(--slate);
       fill: none;
       stroke-width: 1.5;
     }
@@ -832,15 +835,15 @@
       font-family: 'Raleway', sans-serif;
       font-weight: 300;
       font-size: 22px;
-      color: var(--white);
+      color: var(--ink);
       letter-spacing: 0.06em;
       margin-bottom: 16px;
     }
     .value-card p {
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 1.85;
-      color: rgba(255,255,255,0.6);
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 2.0;
+      color: var(--body-txt);
     }
 
     /* ══════════════════════════════════════
@@ -955,17 +958,17 @@
       z-index: 1;
     }
     .testimonial-card {
-      background: var(--warm);
+      background: var(--soft);
       padding: 52px 48px;
       transition: background 0.3s;
     }
-    .testimonial-card:hover { background: var(--mid); }
+    .testimonial-card:hover { background: var(--warm); }
     .testimonial-card p {
       font-family: 'Raleway', sans-serif;
-      font-weight: 300;
+      font-weight: 400;
       font-style: italic;
-      font-size: 16px;
-      line-height: 1.85;
+      font-size: 17px;
+      line-height: 2.0;
       color: var(--ink);
       margin-bottom: 32px;
       letter-spacing: 0.01em;
@@ -1114,9 +1117,9 @@
     }
     .cta-banner h2 em { font-style: italic; font-weight: 200; }
     .cta-banner p {
-      font-size: 15px;
-      font-weight: 300;
-      line-height: 1.85;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 2.0;
       color: rgba(44,53,64,0.75);
       max-width: 520px;
     }
@@ -1128,7 +1131,7 @@
     }
     .btn-ink {
       display: inline-block;
-      background: var(--ink);
+      background: var(--slate);
       color: var(--white);
       font-family: 'Raleway', sans-serif;
       font-size: 10px;
@@ -1141,7 +1144,7 @@
       transition: background 0.25s, transform 0.2s;
       white-space: nowrap;
     }
-    .btn-ink:hover { background: #3d4e5e; transform: translateY(-2px); }
+    .btn-ink:hover { background: var(--ink); transform: translateY(-2px); }
     .cta-phone {
       font-family: 'Raleway', sans-serif;
       font-size: 10px;
@@ -1717,6 +1720,7 @@
     <a href="https://g.page/r/CRbKg20mQEh2EAI/review" target="_blank" rel="noopener" class="btn-review">Leave a Google Review</a>
     <a href="https://www.google.com/search?q=Cloudy+to+Clear+Professional+Organizing" target="_blank" rel="noopener" class="btn-review">Read Google Reviews</a>
     <a href="https://www.yelp.com/writeareview/biz/FvvpNZ8gSt_TbC9KNVWhRA" target="_blank" rel="noopener" class="btn-review">Leave a Yelp Review</a>
+    <a href="https://www.yelp.com/biz/cloudy-to-clear-professional-organizing-daly-city-2" target="_blank" rel="noopener" class="btn-review">Read Yelp Reviews</a>
   </div>
 </section>
 
@@ -1854,12 +1858,14 @@
     <div class="footer-col">
       <span class="footer-col-title">Service Areas</span>
       <p class="footer-areas">
-        San Francisco · Daly City · San Mateo ·
-        Burlingame · Palo Alto · Redwood City ·
-        Menlo Park · South San Francisco ·
-        San Bruno · Pacifica · Half Moon Bay ·
-        Oakland · Berkeley · Alameda ·
-        El Cerrito · Emeryville · Piedmont
+        San Francisco &middot; Daly City &middot; San Mateo &middot;
+        Burlingame &middot; Palo Alto &middot; Redwood City &middot;
+        Menlo Park &middot; South San Francisco &middot;
+        San Bruno &middot; Pacifica &middot; Half Moon Bay &middot;
+        Oakland &middot; Berkeley &middot; Alameda &middot;
+        El Cerrito &middot; Emeryville &middot; Piedmont
+        &middot; and surrounding Bay Area communities &mdash;
+        <a href="/contact/" style="color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#bbd4d8'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">contact us if you don&rsquo;t see your city listed</a>
       </p>
     </div>
 
@@ -1868,6 +1874,10 @@
   <div class="footer-bottom">
     <span class="footer-copy">Cloudy to Clear Professional Organizing &copy; 2022&ndash;2026</span>
     <span class="footer-credit">
+      Photography by <a href="http://jessicamcintosh.net" target="_blank" rel="noopener">Jessica McIntosh</a>
+      &nbsp;&middot;&nbsp;
+      Brand Identity by <a href="https://www.cvilladesign.com" target="_blank" rel="noopener">CVilla Design</a>
+      &nbsp;&middot;&nbsp;
       Website by <a href="https://whiskeyandwasabi.com" target="_blank" rel="noopener">Whiskey &amp; Wasabi LLC</a>
     </span>
     <div class="footer-socials" aria-label="Social media links">
