@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cloudy to Clear — Content Manager</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>x
+</head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
@@ -20,7 +19,71 @@
         },
         media_folder: "Images/uploads",
         public_folder: "/Images/uploads",
-        collections: []
+        collections: [
+          {
+            name: "blog",
+            label: "Blog Posts",
+            folder: "_posts",
+            create: true,
+            slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
+            fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Publish Date", name: "date", widget: "datetime" },
+              { label: "Category", name: "category", widget: "select",
+                options: ["Kitchen & Pantry", "Bedroom & Closet", "Home Office", "Life Transitions", "Tips & Tricks", "Bay Area"] },
+              { label: "Cover Image", name: "thumbnail", widget: "image", required: false },
+              { label: "Excerpt", name: "excerpt", widget: "text" },
+              { label: "Body", name: "body", widget: "markdown" }
+            ]
+          },
+          {
+            name: "services",
+            label: "Services & Pricing",
+            files: [{
+              name: "services",
+              label: "Services & Pricing",
+              file: "_data/services.json",
+              fields: [
+                { label: "Hourly Rate", name: "hourly_rate", widget: "string" },
+                { label: "Garage & Storage Rate", name: "garage_rate", widget: "string" },
+                { label: "Services Introduction", name: "intro", widget: "text" }
+              ]
+            }]
+          },
+          {
+            name: "homepage",
+            label: "Homepage",
+            files: [{
+              name: "homepage",
+              label: "Homepage Content",
+              file: "_data/homepage.json",
+              fields: [
+                { label: "Hero Headline", name: "hero_headline", widget: "string" },
+                { label: "Hero Subtext", name: "hero_subtext", widget: "text" },
+                { label: "About Heading", name: "about_heading", widget: "string" },
+                { label: "About Text", name: "about_text", widget: "text" },
+                { label: "Quote", name: "quote", widget: "string" }
+              ]
+            }]
+          },
+          {
+            name: "faqs",
+            label: "FAQs",
+            files: [{
+              name: "faqs",
+              label: "FAQs",
+              file: "_data/faqs.json",
+              fields: [
+                { label: "FAQ Items", name: "faqs", widget: "list",
+                  fields: [
+                    { label: "Question", name: "question", widget: "string" },
+                    { label: "Answer", name: "answer", widget: "text" }
+                  ]
+                }
+              ]
+            }]
+          }
+        ]
       }
     });
   </script>
