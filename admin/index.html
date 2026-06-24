@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloudy to Clear — Content Manager</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>x
+<body>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: "github",
+          repo: "gmontellanos/cloudytoclear-website",
+          branch: "main",
+          base_url: "https://cloudytoclear-cms.montellanos01.workers.dev",
+          auth_endpoint: "/auth"
+        },
+        media_folder: "Images/uploads",
+        public_folder: "/Images/uploads",
+        collections: []
+      }
+    });
+  </script>
+</body>
+</html>

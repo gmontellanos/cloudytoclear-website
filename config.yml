@@ -1,0 +1,30 @@
+# Jekyll Configuration
+# Cloudy to Clear Professional Organizing
+
+title: Cloudy to Clear Professional Organizing
+description: Professional home and office organizing for busy Bay Area lives.
+url: https://cloudytoclearpo.com
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from build
+exclude:
+  - node_modules
+  - .gitignore
+  - README.md
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

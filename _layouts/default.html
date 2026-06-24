@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }} | Cloudy to Clear Professional Organizing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200;1,300&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/Images/blacklogo.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ice: #bbd4d8; --slate: #8897a9; --white: #ffffff;
+      --ink: #2c3540; --ink-deep: #3d4e5e;
+      --warm: #f2ede8; --cream: #faf8f5; --mid: #e6dfd8;
+      --body-txt: #3a4a5a;
+    }
+    body { font-family: 'Lato', sans-serif; font-weight: 400; color: var(--body-txt); background: var(--white); overflow-x: hidden; font-size: 16px; line-height: 2.0; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(187,212,216,0.3); display: flex; align-items: center; justify-content: space-between; padding: 0 60px; height: 76px; }
+    .nav-logo img { height: 44px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 40px; list-style: none; align-items: center; }
+    .nav-links a { font-family: 'Raleway', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); text-decoration: none; position: relative; padding-bottom: 4px; }
+    .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--slate); transition: width 0.3s ease; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta { background: var(--slate) !important; color: var(--white) !important; padding: 11px 28px !important; letter-spacing: 0.18em !important; }
+    .nav-cta::after { display: none !important; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav-hamburger span { display: block; width: 24px; height: 1px; background: var(--ink); transition: all 0.3s ease; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .mobile-menu { display: none; position: fixed; inset: 0; top: 76px; background: rgba(255,255,255,0.98); backdrop-filter: blur(16px); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+    .mobile-menu .mobile-cta { background: var(--slate); color: var(--white) !important; padding: 14px 36px; margin-top: 8px; }
+    footer { background: var(--ink-deep); padding: 72px 60px 36px; }
+    .footer-top { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.2fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .footer-logo img { height: 52px; width: auto; filter: brightness(0) invert(1); opacity: 0.85; margin-bottom: 20px; display: block; }
+    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.85; color: rgba(255,255,255,0.5); max-width: 260px; }
+    .footer-col-title { font-family: 'Raleway', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase; color: var(--ice); margin-bottom: 24px; display: block; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--ice); }
+    .footer-contact-item { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 12px; }
+    .footer-contact-item a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-contact-item a:hover { color: var(--ice); }
+    .footer-areas { font-size: 12px; font-weight: 300; line-height: 2; color: rgba(255,255,255,0.35); }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; }
+    .footer-credit { font-size: 11px; color: rgba(255,255,255,0.3); }
+    .footer-credit a { color: var(--ice); text-decoration: none; opacity: 0.75; transition: opacity 0.2s; }
+    .footer-credit a:hover { opacity: 1; }
+    .footer-socials { display: flex; gap: 20px; }
+    .footer-socials a { font-family: 'Raleway', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-socials a:hover { color: var(--ice); }
+    @media (max-width: 1024px) { nav { padding: 0 32px; } footer { padding: 60px 32px 32px; } .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; } }
+    @media (max-width: 768px) { nav { padding: 0 24px; height: 64px; } .nav-links { display: none; } .nav-hamburger { display: flex; } .footer-top { grid-template-columns: 1fr; } footer { padding: 48px 24px 28px; } }
+  </style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo">
+    <a href="/" aria-label="Cloudy to Clear home">
+      <img src="/Images/blacklogo.png" alt="Cloudy to Clear Professional Organizing" width="160" height="44" />
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/services/">Services &amp; Pricing</a></li>
+    <li><a href="/faqs/">FAQs</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/collaborations/">Collaborations</a></li>
+    <li><a href="/contact/" class="nav-cta">Book a Free Call</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/about/">About</a>
+  <a href="/services/">Services &amp; Pricing</a>
+  <a href="/faqs/">FAQs</a>
+  <a href="/blog/">Blog</a>
+  <a href="/collaborations/">Collaborations</a>
+  <a href="/contact/" class="mobile-cta">Book a Free Call</a>
+</div>
+
+{{ content }}
+
+<footer role="contentinfo">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="/Images/whitelogo.png" alt="Cloudy to Clear Professional Organizing" width="160" height="52" loading="lazy" />
+      <p class="footer-tagline">Professional home and office organizing for busy Bay Area lives.</p>
+    </div>
+    <div class="footer-col">
+      <span class="footer-col-title">Pages</span>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About Claudia</a></li>
+        <li><a href="/services/">Services &amp; Pricing</a></li>
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/collaborations/">Collaborations</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <span class="footer-col-title">Contact</span>
+      <div class="footer-contact-item"><a href="mailto:claudia@cloudytoclearpo.com">claudia@cloudytoclearpo.com</a></div>
+      <div class="footer-contact-item"><a href="tel:+14155191369">415-519-1369</a></div>
+      <div class="footer-contact-item">Daly City, California</div>
+    </div>
+    <div class="footer-col">
+      <span class="footer-col-title">Service Areas</span>
+      <p class="footer-areas">San Francisco &middot; Daly City &middot; San Mateo &middot; Burlingame &middot; Palo Alto &middot; Oakland &middot; Berkeley &middot; and surrounding Bay Area communities</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">Cloudy to Clear Professional Organizing &copy; 2022&ndash;2026</span>
+    <span class="footer-credit">
+      Photography by <a href="http://jessicamcintosh.net" target="_blank" rel="noopener">Jessica McIntosh</a>
+      &nbsp;&middot;&nbsp;
+      Brand Identity by <a href="https://www.cvilladesign.com" target="_blank" rel="noopener">CVilla Design</a>
+      &nbsp;&middot;&nbsp;
+      Website by <a href="https://whiskeyandwasabi.com" target="_blank" rel="noopener">Whiskey &amp; Wasabi LLC</a>
+    </span>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/cloudytoclear_organizing" target="_blank" rel="noopener">Instagram</a>
+      <a href="http://www.linkedin.com/in/claudia-p-a56a325" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.yelp.com/biz/cloudy-to-clear-professional-organizing-daly-city-2" target="_blank" rel="noopener">Yelp</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+</body>
+</html>

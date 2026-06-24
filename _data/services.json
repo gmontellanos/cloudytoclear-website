@@ -1,0 +1,36 @@
+{
+    "hourly_rate": "$110 per hour",
+    "garage_rate": "$125 per hour",
+    "intro": "Every service starts with a complimentary consultation so Claudia can understand your space, your goals, and your lifestyle. No judgment, no pressure — just practical, beautiful systems built around you.",
+    "packages": [
+      {
+        "name": "Starter",
+        "hours": "4",
+        "price": "$440",
+        "ideal_for": "Ideal for a single room",
+        "features": ["1 focused space or area", "Free phone consultation", "Free virtual consult included"]
+      },
+      {
+        "name": "Most Popular",
+        "hours": "12",
+        "price": "$1,320",
+        "ideal_for": "Ideal for kitchens, closets & office space",
+        "features": ["2-3 rooms or spaces", "Free phone consultation", "Free virtual consult included", "Donation drop offs"]
+      },
+      {
+        "name": "Deep Reset",
+        "hours": "24",
+        "price": "$2,640",
+        "ideal_for": "Ideal for major declutters",
+        "features": ["Half-home transformation", "Free phone consultation", "Free virtual consult included"]
+      },
+      {
+        "name": "Full Home",
+        "hours": "36",
+        "price": "$3,960",
+        "ideal_for": "Ideal for whole-home resets",
+        "features": ["Complete home transformation", "Free phone consultation", "Free virtual consult included", "Custom product suggestions"]
+      }
+    ]
+  }
+  
