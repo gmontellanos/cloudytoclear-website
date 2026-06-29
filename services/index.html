@@ -235,8 +235,8 @@
     /* ── SECTION SHARED ── */
     .section-eyebrow {
       font-family: 'Raleway', sans-serif;
-      font-size: 9px; font-weight: 500;
-      letter-spacing: 0.3em; text-transform: uppercase;
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
       color: var(--slate); margin-bottom: 20px; display: block;
     }
 
@@ -453,9 +453,9 @@
     /* Garage/special rate card */
     .pricing-special {
       background: rgba(255,255,255,0.03);
-      padding: 36px 48px;
-      display: flex; justify-content: space-between;
-      align-items: center; gap: 32px; flex-wrap: wrap;
+      padding: 28px 48px;
+      display: flex; justify-content: flex-start;
+      align-items: center; gap: 20px; flex-wrap: wrap;
       border-top: 1px solid rgba(255,255,255,0.06);
     }
     .pricing-special p {
@@ -466,7 +466,7 @@
     .pricing-special p em { font-style: italic; color: var(--ice); }
     .pricing-special-rate {
       font-family: 'Raleway', sans-serif;
-      font-weight: 300; font-size: 22px;
+      font-weight: 300; font-size: 20px;
       color: var(--white); white-space: nowrap; flex-shrink: 0;
     }
 
@@ -518,8 +518,8 @@
     .process-step:hover::before { height: 100%; }
     .step-num {
       font-family: 'Raleway', sans-serif;
-      font-weight: 100; font-size: 64px;
-      color: rgba(136,151,169,0.15); line-height: 1;
+      font-weight: 400; font-size: 56px;
+      color: rgba(136,151,169,0.4); line-height: 1;
       margin-bottom: 16px; letter-spacing: -0.02em;
     }
     .process-step h3 {
@@ -874,96 +874,36 @@
 <!-- ═══ PRICING ═══ -->
 <section class="pricing" id="pricing" aria-labelledby="pricing-heading">
   <div class="pricing-header reveal">
-    <span class="section-eyebrow">Transparent Pricing</span>
+    <span class="section-eyebrow">Organizing Packages</span>
     <h2 id="pricing-heading">
-      Simple packages,<br>
-      <em>no surprises.</em>
+      Organizing Services
     </h2>
-    <p>
-      All sessions are a minimum of 4 hours. Pricing does not include
-      organizing products. Custom packages available on request.
+    <p>Personalized organizing support for every stage of your journey.</p>
+  </div>
+
+  <!-- Investment section -->
+  <div style="max-width: 780px; margin: 0 auto 56px; padding: 0 40px; text-align: center;">
+    <p style="font-size: 16px; font-weight: 400; line-height: 2.0; color: rgba(255,255,255,0.75); margin-bottom: 24px;">
+      Because no two homes&mdash;or the people who live in them&mdash;are alike, every organizing project is personalized to your needs. Whether you need help with one challenging space or a more extensive organizing project, I&rsquo;ll recommend the best approach based on your goals, priorities, timeline, and budget.
     </p>
   </div>
 
-  <div class="pricing-grid">
-    <!-- 4hr Starter -->
-    <div class="pricing-card reveal reveal-delay-1">
-      <span class="pricing-card-label">Starter</span>
-      <div class="pricing-card-hours">4<span>hr</span></div>
-      <span class="pricing-card-unit">Session</span>
-      <div class="pricing-card-price">$440</div>
-      <div class="pricing-card-rate">$110 / hour</div>
-      <div class="pricing-card-divider"></div>
-      <ul class="pricing-card-features">
-        <li>1 focused space or area</li>
-        <li>Ideal for a single room</li>
-        <li>Free phone consultation</li>
-        <li>Free virtual consult included</li>
-      </ul>
-    </div>
-
-    <!-- 12hr Most Popular -->
-    <div class="pricing-card featured reveal reveal-delay-2">
-      <span class="pricing-card-label">Most Popular</span>
-      <div class="pricing-card-hours">12<span>hr</span></div>
-      <span class="pricing-card-unit">Package</span>
-      <div class="pricing-card-price">$1,320</div>
-      <div class="pricing-card-rate">$110 / hour</div>
-      <div class="pricing-card-divider"></div>
-      <ul class="pricing-card-features">
-        <li>2&ndash;3 rooms or spaces</li>
-        <li>Ideal for kitchens, closets &amp; office spaces</li>
-        <li>Free phone consultation</li>
-        <li>Free virtual consult included</li>
-        <li>Donation drop offs</li>
-      </ul>
-    </div>
-
-    <!-- 24hr Deep Reset -->
-    <div class="pricing-card reveal reveal-delay-3">
-      <span class="pricing-card-label">Deep Reset</span>
-      <div class="pricing-card-hours">24<span>hr</span></div>
-      <span class="pricing-card-unit">Package</span>
-      <div class="pricing-card-price">$2,640</div>
-      <div class="pricing-card-rate">$110 / hour</div>
-      <p class="pricing-card-desc">Ideal for major decluttering projects and multiple areas of the home. Designed for clients who are ready to make significant progress, reduce overwhelm, and create lasting systems that make daily life easier.</p>
-      <div class="pricing-card-divider"></div>
-      <ul class="pricing-card-features">
-        <li>Ideal for major declutters</li>
-        <li>Free phone consultation</li>
-        <li>Free virtual consult included</li>
-        <li>Donation drop offs</li>
-      </ul>
-    </div>
-
-    <!-- 36hr Signature Home Package -->
-    <div class="pricing-card reveal reveal-delay-1">
-      <span class="pricing-card-label">Signature Home Package</span>
-      <div class="pricing-card-hours">36<span>hr</span></div>
-      <span class="pricing-card-unit">Package</span>
-      <div class="pricing-card-price">$3,960</div>
-      <div class="pricing-card-rate">$110 / hour</div>
-      <p class="pricing-card-desc">Ideal for clients tackling multiple areas of the home. The number of spaces completed depends on the size of the home, volume of belongings, decision-making pace, and project goals.</p>
-      <div class="pricing-card-divider"></div>
-      <ul class="pricing-card-features">
-        <li>Ideal for whole-home resets</li>
-        <li>Free phone consultation</li>
-        <li>Free virtual consult included</li>
-        <li>Donation drop offs</li>
-        <li>Custom product suggestions</li>
-      </ul>
+  <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(187,212,216,0.2); max-width: 680px; margin: 0 auto 24px; padding: 48px 52px; text-align: center;" class="reveal">
+    <span style="font-family:'Raleway',sans-serif; font-size:12px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--ice); display:block; margin-bottom:20px;">Investment</span>
+    <div style="font-family:'Raleway',sans-serif; font-weight:200; font-size:clamp(32px,4vw,52px); color:var(--white); letter-spacing:0.04em; margin-bottom:8px;">Services start at $440</div>
+    <div style="font-family:'Raleway',sans-serif; font-size:14px; font-weight:300; color:rgba(255,255,255,0.6); letter-spacing:0.08em; margin-bottom:32px;">4-hour minimum at $110/hour</div>
+    <p style="font-size:15px; font-weight:400; line-height:1.9; color:rgba(255,255,255,0.7); margin-bottom:28px;">
+      Every organizing project is customized based on your goals, your space, and the level of support you need. You&rsquo;ll receive a personalized recommendation and proposal before any work begins, so you&rsquo;ll know exactly what to expect.
+    </p>
+    <p style="font-size:13px; font-weight:400; line-height:1.8; color:rgba(255,255,255,0.5); font-style:italic; margin-bottom:36px;">
+      Please note: Garage organizing, sheds, packing, unpacking, and moving-related services are $125/hour per organizer and are quoted separately based on the scope of your project.
+    </p>
+    <a href="/contact/" class="btn-ice">Tell Me About Your Project</a>
+    <div style="margin-top:16px;">
+      <a href="tel:+14155191369" style="font-family:'Raleway',sans-serif; font-size:11px; letter-spacing:0.14em; color:rgba(255,255,255,0.4); text-decoration:none;">or call 415-519-1369</a>
     </div>
   </div>
 
-  <div class="pricing-special reveal">
-    <p>Garages, storage units &amp; home packing/unpacking — <em>specialist rate applies</em></p>
-    <span class="pricing-special-rate">$125 / hour</span>
-  </div>
-
-  <div class="pricing-cta reveal">
-    <a href="/contact" class="btn-ice">Book Your Free Consultation</a>
-    <p class="pricing-note">Custom packages available &middot; Pricing does not include organizing products</p>
-  </div>
 </section>
 
 <!-- ═══ PROCESS ═══ -->
@@ -972,21 +912,42 @@
     <span class="section-eyebrow">How It Works</span>
     <h2 id="process-heading">A simple, <em>stress-free process.</em></h2>
   </div>
-  <div class="process-steps">
+  <div class="process-steps" style="grid-template-columns: repeat(3, 1fr);">
     <div class="process-step reveal reveal-delay-1">
       <div class="step-num" aria-hidden="true">01</div>
-      <h3>Phone Consultation</h3>
-      <p>A complimentary 15-minute call to learn about you, your space, and your goals. No commitment, no pressure — just a calm conversation about what you need.</p>
+      <h3>Let&rsquo;s Connect</h3>
+      <p>Complete the intake form or call me for a complimentary 15-minute discovery phone consultation&mdash;whichever is easiest for you.</p>
     </div>
     <div class="process-step reveal reveal-delay-2">
       <div class="step-num" aria-hidden="true">02</div>
-      <h3>In-Home or Virtual Consult</h3>
-      <p>A complimentary 30-minute walkthrough — in person or via video — to assess your space and build a clear, personalized project plan tailored to your timeline.</p>
+      <h3>Schedule Your Complimentary Consultation</h3>
+      <p>After submitting your intake form, you&rsquo;ll receive a link to schedule a complimentary consultation. Choose a 15-minute discovery call or a 30&ndash;45 minute virtual consultation.</p>
     </div>
     <div class="process-step reveal reveal-delay-3">
       <div class="step-num" aria-hidden="true">03</div>
-      <h3>Organizing Sessions</h3>
-      <p>Sessions start at a minimum of 4 hours. We work side by side building systems that are practical, beautiful, and built to last your real life. Packages available.</p>
+      <h3>Choose the Best Organizing Approach</h3>
+      <p>Based on our conversation, I&rsquo;ll recommend the organizing approach that&rsquo;s the best fit for your project.</p>
+    </div>
+    <div class="process-step reveal reveal-delay-1">
+      <div class="step-num" aria-hidden="true">04</div>
+      <h3>Review Your Proposal</h3>
+      <p>If you&rsquo;d like to move forward, I&rsquo;ll send you a personalized proposal that includes my recommendation, agreement, and invoice.</p>
+    </div>
+    <div class="process-step reveal reveal-delay-2">
+      <div class="step-num" aria-hidden="true">05</div>
+      <h3>Schedule Your Organizing Session</h3>
+      <p>Once your agreement is signed and your payment is received, you&rsquo;ll schedule your organizing session(s).</p>
+    </div>
+    <div class="process-step reveal reveal-delay-3">
+      <div class="step-num" aria-hidden="true">06</div>
+      <h3>Transform Your Space</h3>
+      <p>Your space will become more functional, organized, and easier to maintain with customized systems designed specifically for your lifestyle.</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:56px;" class="reveal">
+    <a href="/contact/" class="btn-ice">Tell Me About Your Project</a>
+    <div style="margin-top:14px;">
+      <a href="tel:+14155191369" style="font-family:'Raleway',sans-serif; font-size:11px; letter-spacing:0.14em; color:var(--slate); text-decoration:none;">or call 415-519-1369</a>
     </div>
   </div>
 </section>
@@ -1001,7 +962,7 @@
     </h2>
     <p>
       Highly motivated and ready to take action? Virtual organizing
-      offers expert guidance, accountability, and a clear plan —
+      offers expert guidance, accountability, and a clear plan &mdash;
       on your schedule, wherever you are.
     </p>
     <p>
@@ -1015,7 +976,7 @@
       <li>Weekly 60-minute virtual coaching sessions</li>
       <li>Ongoing communication &amp; support between sessions</li>
     </ul>
-    <a href="/contact" class="btn-outlined" style="border-color:rgba(255,255,255,0.4);color:var(--white);">Get Started</a>
+    <a href="/contact/" class="btn-outlined" style="border-color:rgba(255,255,255,0.4);color:var(--white);">Get Started</a>
   </div>
   <div class="virtual-img">
     <img
@@ -1030,17 +991,15 @@
 <section class="cta-banner reveal" aria-labelledby="cta-heading">
   <div>
     <h2 id="cta-heading">
-      Not sure which package<br>
-      <em>is right for you?</em>
+      Every Organized Home Starts<br>
+      <em>with a Conversation.</em>
     </h2>
     <p>
-      Start with a free 15-minute phone consultation. Claudia will
-      assess your space and recommend exactly what you need —
-      no upselling, no pressure. Just honest, expert advice.
+      You don&rsquo;t have to know exactly where to begin&mdash;that&rsquo;s what I&rsquo;m here for. Whether you&rsquo;re overwhelmed by one space or your entire home, we&rsquo;ll start with a conversation about your goals, your challenges, and what matters most to you. From there, I&rsquo;ll recommend an approach that&rsquo;s personalized to your home, your priorities, and your budget. The first step is simply reaching out.
     </p>
   </div>
   <div class="cta-actions">
-    <a href="/contact" class="btn-ink">Book Your Free Call</a>
+    <a href="/contact/" class="btn-ink">Tell Me About Your Project</a>
     <a href="tel:+14155191369" class="cta-phone">or call 415-519-1369</a>
   </div>
 </section>

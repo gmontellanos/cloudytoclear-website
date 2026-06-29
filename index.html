@@ -6,7 +6,7 @@
 
   <!-- ═══ SEO: Primary Meta Tags ═══ -->
   <title>Professional Organizer San Francisco Bay Area | Cloudy to Clear</title>
-  <meta name="description" content="Cloudy to Clear Professional Organizing — award-winning home and office organizer serving San Francisco Bay Area, San Mateo County, and the East Bay. Book your free consultation today." />
+  <meta name="description" content="Cloudy to Clear Professional Organizing — award-winning home and office organizer serving San Francisco, San Mateo County, and the East Bay. Book your free consultation today." />
   <meta name="keywords" content="professional organizer San Francisco, home organizer Bay Area, decluttering San Mateo County, organizing services East Bay, virtual organizing California, Cloudy to Clear" />
   <link rel="canonical" href="https://www.cloudytoclearpo.com/" />
 
@@ -104,6 +104,23 @@
       font-size: 16px;
       line-height: 2.0;
     }
+
+    /* ══════════════════════════════════════
+       CURSOR -- DOT ONLY (no lag ring)
+    ══════════════════════════════════════ */
+    body { cursor: none; }
+    .cursor-dot {
+      position: fixed;
+      width: 8px; height: 8px;
+      background: var(--slate);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease, background 0.2s, width 0.2s, height 0.2s;
+    }
+    a:hover ~ .cursor-dot,
+    button:hover ~ .cursor-dot { background: var(--ink); width: 12px; height: 12px; }
 
     /* ══════════════════════════════════════
        SPLASH SCREEN
@@ -498,9 +515,9 @@
     }
     .section-eyebrow {
       font-family: 'Raleway', sans-serif;
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: 0.3em;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--slate);
       margin-bottom: 24px;
@@ -888,9 +905,9 @@
     .process-step:hover::before { height: 100%; }
     .step-num {
       font-family: 'Raleway', sans-serif;
-      font-weight: 100;
-      font-size: 64px;
-      color: rgba(136,151,169,0.15);
+      font-weight: 400;
+      font-size: 56px;
+      color: rgba(136,151,169,0.4);
       line-height: 1;
       margin-bottom: 16px;
       letter-spacing: -0.02em;
@@ -1352,8 +1369,9 @@
 <div class="load-line" aria-hidden="true"></div>
 
 <!-- ═══════════════════════════════════════
-     SPLASH SCREEN
+     CURSOR DOT ONLY
 ═══════════════════════════════════════ -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 <div class="splash" id="splash" role="presentation" aria-hidden="true">
   <img
     src="Images/icedbluelogo.png"
@@ -1629,8 +1647,8 @@
   </div>
 
   <div class="services-cta-strip reveal">
-    <p>Starting at $110/hr · <em>Free 15-minute phone consultation included</em></p>
-    <a href="/contact" class="btn-dark">Book Your Free Call</a>
+    <p><em>Free 15-minute phone consultation included</em></p>
+    <a href="/contact/" class="btn-dark">Book Your Free Call</a>
   </div>
 </section>
 
@@ -1788,7 +1806,7 @@
     <p>
       Start with a complimentary 15-minute phone consultation. No commitment,
       no judgment — just a calm conversation about your space and your goals.
-      Serving San Francisco Bay Area, San Mateo County, Daly City, and the East Bay.
+      Serving San Francisco, San Mateo County, Daly City, and the East Bay.
     </p>
   </div>
   <div class="cta-banner-actions">
@@ -1812,7 +1830,7 @@
       />
       <p class="footer-tagline">
         Professional home and office organizing for busy Bay Area lives.
-        Serving San Francisco Bay Area, San Mateo County, Daly City, and the East Bay since 2022.
+        Serving San Francisco, San Mateo County, Daly City, and the East Bay since 2022.
       </p>
     </div>
 
@@ -1936,6 +1954,25 @@
       mobileMenu.classList.remove('open');
       hamburger.classList.remove('open');
       document.body.style.overflow = '';
+    });
+  });
+
+  /* ── Cursor Dot Only (no lag ring) ── */
+  const cursorDot = document.getElementById('cursorDot');
+  document.addEventListener('mousemove', e => {
+    cursorDot.style.left = e.clientX + 'px';
+    cursorDot.style.top = e.clientY + 'px';
+  });
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursorDot.style.background = 'var(--ink)';
+      cursorDot.style.width = '12px';
+      cursorDot.style.height = '12px';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursorDot.style.background = 'var(--slate)';
+      cursorDot.style.width = '8px';
+      cursorDot.style.height = '8px';
     });
   });
 
